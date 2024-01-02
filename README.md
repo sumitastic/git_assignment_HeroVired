@@ -21,3 +21,25 @@ git merge dev
 git tag v2.0
 git push origin main --tags
 
+#Question 2- solution
+# Navigate to your local repository
+cd git_assignment_HeroVired
+
+# Initialize Git LFS
+git lfs install
+git checkout -b lfs
+# Add the large file to be tracked by Git LFS
+git lfs track "large_file.bin"
+
+# Commit the changes
+git add .gitattributes large_file.bin
+git commit -m "Add large binary file and configure Git LFS"
+git push origin lfs
+git clone <repository-url>
+cd git_assignment_HeroVired
+git checkout lfs
+# Check the file size
+ls -lh large_file.bin
+#Question-3
+
+
