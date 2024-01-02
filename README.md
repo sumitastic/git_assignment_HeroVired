@@ -41,5 +41,27 @@ git checkout lfs
 # Check the file size
 ls -lh large_file.bin
 #Question-3
+git checkout -b feature/circle-area
+git stash save "WIP: Circle Area Feature"
+git status
+git checkout -b feature/rectangle-area
+git stash save "WIP: Rectangle Area Feature"
+git status
+git checkout feature/circle-area
+git stash apply
+radius = 5
+print(f"The area of the circle with radius {radius} = {calculator.calculate_circle_area(radius)}")
+git add .
+git commit -m "Implement Circle Area Feature"
+git push origin feature/circle-area
+git checkout feature/rectangle-area
+git stash apply
+length = 10
+width = 6
+print(f"The area of the rectangle with length {length} and width {width} = {calculator.calculate_rectangle_area(length, width)}")
+git add .
+git commit -m "Implement Rectangle Area Feature"
+git push origin feature/rectangle-area
+
 
 
