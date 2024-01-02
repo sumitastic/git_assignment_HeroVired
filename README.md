@@ -13,3 +13,11 @@ def divide(self, a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero.")
     return a / b
+    git checkout dev
+git merge feature/sqrt
+git checkout main
+git merge dev
+# Resolve any conflicts if needed
+git tag v2.0
+git push origin main --tags
+
